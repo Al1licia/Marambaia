@@ -2,6 +2,8 @@
 
 **A tecnologia que ajuda a preservar o conhecimento por trás do sabor.**
 
+Acesse o site: https://al1licia.github.io/Marambaia/
+
 Protótipo funcional para hackathon. Conecta três dimensões: **Conhecimento** (como o prato é feito e quais decisões o definem), **Pessoas** (formar a equipe e reconhecer o mestre) e **Consistência** (acompanhar se o prato continua no padrão).
 
 Todos os dados são fictícios.
