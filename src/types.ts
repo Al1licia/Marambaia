@@ -34,6 +34,8 @@ export interface Dish {
   name: string;
   tagline: string;
   art: DishArtKind;
+  /** Foto real do prato, relativa à raiz do site. Sem ela, mostra a ilustração. */
+  photo?: string;
   steps: Step[];
 }
 

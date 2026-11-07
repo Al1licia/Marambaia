@@ -9,7 +9,9 @@ O Bar do Seu Arlindo é um estabelecimento inventado para a demonstração.
 
 ## Como executar
 
-**Sem instalar nada:** abra `dist/index.html` com dois cliques. Funciona sem internet, desde que a pasta `dist` fique inteira: o HTML depende de `css/style.css`, `js/app.js` e `fonts/`.
+**Online:** o GitHub Pages publica a raiz da branch `main` (Settings > Pages > Deploy from a branch > `main` / `root`).
+
+**Sem instalar nada:** abra o `index.html` da raiz com dois cliques. Funciona sem internet, desde que as pastas `css/`, `js/` e `fonts/` fiquem ao lado dele.
 
 **Para desenvolver** (requer Node.js 20 ou mais recente):
 
@@ -27,7 +29,7 @@ Abra o endereço mostrado no terminal, normalmente `http://localhost:5173`.
 npm run build
 ```
 
-Gera a pasta `dist` atualizada, com HTML, CSS e JS em arquivos separados. Para mudar o visual, edite `src/index.css` e `tailwind.config.js`, e não `dist/css/style.css`, que é recriado a cada build.
+Atualiza `css/`, `js/` e `fonts/` na raiz. **Rode antes de cada push que mude o código**, senão o site publicado continua com a versão anterior. O `index.html` é um só: no `npm run dev` o Vite troca sozinho as linhas do build pelo código-fonte. Para mudar o visual, edite `src/index.css` e `tailwind.config.js`, e não `css/style.css`, que é recriado a cada build.
 
 ## Acessos demonstrativos
 
