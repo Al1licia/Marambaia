@@ -62,7 +62,8 @@ export const Home = () => {
   const fb = feedbackStats(db.feedbacks);
   const me = user.employeeId ? db.employees.find((e) => e.id === user.employeeId) : undefined;
 
-  const first = user.name.split(' ')[0];
+  // "Seu Arlindo Prado" vira "Seu Arlindo", não "Seu".
+  const first = user.name.split(' ').slice(0, user.name.startsWith('Seu ') ? 2 : 1).join(' ');
   let resumo: string;
   if (me) {
     const t = employeeTotals(db, me.id, me.learning);

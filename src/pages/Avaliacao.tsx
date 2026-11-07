@@ -254,7 +254,7 @@ export const Avaliacao = () => {
               <div role="radiogroup" aria-label="Necessidade de supervisão" className="grid gap-1.5 sm:grid-cols-3">
                 {([['sem', 'Sem supervisão'], ['pontual', 'Pontual'], ['constante', 'Constante']] as [Supervision, string][]).map(([v, l]) => (
                   <button key={v} type="button" role="radio" aria-checked={supervisao === v} onClick={() => setSupervisao(v)}
-                    className={`min-h-[48px] rounded-xl border px-2 font-semibold transition-colors ${supervisao === v ? 'border-brand bg-brand text-cream' : `${tried && !supervisao ? 'border-danger/60' : 'border-line'} text-muted hover:text-cream`}`}>{l}</button>
+                    className={`min-h-[48px] rounded-xl border px-2 font-semibold transition-colors ${supervisao === v ? 'border-brand bg-brand text-paper' : `${tried && !supervisao ? 'border-danger/60' : 'border-line'} text-muted hover:text-cream`}`}>{l}</button>
                 ))}
               </div>
             </div>
@@ -266,7 +266,7 @@ export const Avaliacao = () => {
             <div role="radiogroup" aria-label="Resultado" className="grid gap-2 sm:grid-cols-2">
               {(Object.keys(RESULT_LABEL) as EvalResult[]).map((r) => (
                 <button key={r} type="button" role="radio" aria-checked={result === r} onClick={() => setResult(r)}
-                  className={`min-h-[56px] rounded-xl border px-3 text-left font-semibold transition-colors ${result === r ? 'border-brand bg-brand text-cream' : `${tried && !result ? 'border-danger/60' : 'border-line'} text-body hover:border-cream/40`}`}>
+                  className={`min-h-[56px] rounded-xl border px-3 text-left font-semibold transition-colors ${result === r ? 'border-brand bg-brand text-paper' : `${tried && !result ? 'border-danger/60' : 'border-line'} text-body hover:border-cream/40`}`}>
                   {RESULT_LABEL[r]}
                 </button>
               ))}

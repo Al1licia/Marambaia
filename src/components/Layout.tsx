@@ -71,7 +71,7 @@ export const Layout = () => {
               {items.map(({ to, label, icon: Icon, locked, active }) => (
                 <li key={to}>
                   <NavLink to={to} onClick={() => setOpen(false)}
-                    className={({ isActive }) => `flex min-h-[52px] items-center gap-3 rounded-xl px-3 font-medium transition-colors ${isActive || active ? 'bg-brand text-cream' : 'text-body hover:bg-cream/5'}`}>
+                    className={({ isActive }) => `flex min-h-[52px] items-center gap-3 rounded-xl px-3 font-medium transition-colors ${isActive || active ? 'bg-brand text-paper' : 'text-body hover:bg-cream/5'}`}>
                     <Icon size={20} aria-hidden className="shrink-0" />
                     <span className="flex-1">{label}</span>
                     {locked && <Lock size={15} aria-label="Acesso restrito" className="text-muted" />}

@@ -50,7 +50,7 @@ const FeedbackForm = ({ onClose }: { onClose: () => void }) => {
         <Field label="O sabor estava como você esperava?" error={tried && !expected ? 'Escolha uma opção.' : undefined}>
           <div role="radiogroup" aria-label="O sabor estava como você esperava?" className="grid gap-1.5 sm:grid-cols-3">
             {([['sim', 'Sim'], ['nao', 'Não'], ['nao_sei', 'Não sei avaliar']] as [Expectation, string][]).map(([v, l]) => (
-              <button key={v} type="button" role="radio" aria-checked={expected === v} onClick={() => setExpected(v)} className={`min-h-[48px] rounded-xl border px-2 font-semibold transition-colors ${expected === v ? 'border-brand bg-brand text-cream' : 'border-line text-muted hover:text-cream'}`}>{l}</button>
+              <button key={v} type="button" role="radio" aria-checked={expected === v} onClick={() => setExpected(v)} className={`min-h-[48px] rounded-xl border px-2 font-semibold transition-colors ${expected === v ? 'border-brand bg-brand text-paper' : 'border-line text-muted hover:text-cream'}`}>{l}</button>
             ))}
           </div>
         </Field>

@@ -12,7 +12,7 @@ interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-brand text-cream hover:bg-brand-hover',
+  primary: 'bg-brand text-paper hover:bg-brand-hover',
   secondary: 'border border-cream/25 text-cream hover:border-cream/60 hover:bg-cream/5',
   ghost: 'text-body hover:bg-cream/5',
 };
@@ -136,7 +136,7 @@ export const ScorePicker = ({ value, onChange, label, error }: { value: number; 
     {[1, 2, 3, 4, 5].map((n) => (
       <button key={n} type="button" role="radio" aria-checked={value === n} aria-label={`${n} de 5`} onClick={() => onChange(n)}
         className={`h-11 w-11 rounded-lg border text-base font-semibold tabular-nums transition-colors
-          ${value === n ? 'border-brand bg-brand text-cream' : value > n ? 'border-brand/50 bg-brand/15 text-cream' : `${error ? 'border-danger/60' : 'border-line'} text-muted hover:border-cream/40 hover:text-cream`}`}>
+          ${value === n ? 'border-brand bg-brand text-paper' : value > n ? 'border-brand/50 bg-brand/15 text-cream' : `${error ? 'border-danger/60' : 'border-line'} text-muted hover:border-cream/40 hover:text-cream`}`}>
         {n}
       </button>
     ))}
