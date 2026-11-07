@@ -1,4 +1,4 @@
-# Ponto Zero
+# No Ponto
 
 **A tecnologia que ajuda a preservar o conhecimento por trás do sabor.**
 

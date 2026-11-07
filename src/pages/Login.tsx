@@ -13,10 +13,10 @@ const PROFILES: { role: Role; label: string; desc: string; icon: LucideIcon }[] 
   { role: 'aprendiz', label: 'Aprendiz', desc: 'Conteúdo aprovado e seu progresso', icon: GraduationCap },
 ];
 
-const PILLARS = [
-  ['Conhecimento', 'Registrar as decisões que definem cada prato.'],
-  ['Pessoas', 'Formar a equipe e reconhecer quem domina a técnica.'],
-  ['Consistência', 'Acompanhar se o sabor continua sendo o da casa.'],
+const STEPS = [
+  ['1', 'O mestre cozinha', 'Do jeito de sempre, sem precisar virar professor.'],
+  ['2', 'Cada ponto é registrado', 'Cor, textura e ordem de cada etapa, com a palavra dele.'],
+  ['3', 'O aprendiz avança com o aval', 'Só passa para a etapa seguinte depois que o mestre aprova.'],
 ];
 
 export const Login = () => {
@@ -58,32 +58,32 @@ export const Login = () => {
   };
 
   return (
-    <div className="grid min-h-dvh lg:grid-cols-[1.1fr_1fr]">
-      <section className="relative flex flex-col justify-between overflow-hidden px-6 py-8 sm:px-12 lg:py-12">
-        <div aria-hidden className="pointer-events-none absolute -bottom-[22rem] -left-[16rem] h-[46rem] w-[46rem] rounded-full border border-orange/20" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-[28rem] -left-[22rem] h-[58rem] w-[58rem] rounded-full border border-magenta/15" />
-        <div className="relative flex items-center gap-5 lg:block">
-          <LogoMark size={148} className="hidden lg:block" />
-          <LogoMark size={84} className="lg:hidden" />
+    <div className="grid min-h-dvh lg:grid-cols-[1.1fr_.9fr]">
+      <section className="flex flex-col justify-between bg-brand px-6 py-8 text-paper sm:px-12 lg:px-16 lg:py-14">
+        <div className="flex items-center gap-5 lg:block">
+          <LogoMark size={96} />
           <div className="lg:mt-8">
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-7xl">Ponto Zero</h1>
-            <p className="mt-2 font-display text-lg italic text-body sm:text-xl lg:mt-4 lg:text-2xl">Preservando sabores. Compartilhando histórias.</p>
+            <h1 className="text-5xl font-semibold tracking-tight text-paper sm:text-6xl lg:text-7xl">No Ponto</h1>
+            <p className="mt-3 max-w-md text-lg text-paper/90 lg:text-xl">O mestre cozinha como sempre. A equipe aprende ao lado dele, dentro do turno.</p>
           </div>
         </div>
-        <ul className="relative mt-12 hidden max-w-xl gap-5 lg:grid lg:grid-cols-3">
-          {PILLARS.map(([t, d]) => (
-            <li key={t}>
-              <p className="font-display text-lg font-semibold text-cream">{t}</p>
-              <p className="mt-1 text-sm leading-relaxed text-muted">{d}</p>
+        <ol className="mt-12 hidden max-w-md gap-5 lg:grid">
+          {STEPS.map(([n, t, d]) => (
+            <li key={n} className="flex gap-4">
+              <span className="w-5 shrink-0 font-display text-2xl leading-none text-paper/70">{n}</span>
+              <div>
+                <p className="font-semibold text-paper">{t}</p>
+                <p className="mt-0.5 text-sm leading-relaxed text-paper/90">{d}</p>
+              </div>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
 
-      <section className="flex items-center border-line bg-surface/60 px-6 py-8 sm:px-12 lg:border-l">
+      <section className="flex items-center bg-ink px-6 py-8 sm:px-12">
         <form onSubmit={submit} noValidate className="mx-auto flex w-full max-w-md flex-col gap-5">
           <div>
-            <p className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-orange/40 bg-orange/10 px-2.5 py-1 text-xs font-semibold text-orange">
+            <p className="mb-2 inline-flex items-center gap-1.5 rounded-md border border-orange/40 bg-orange/10 px-2.5 py-1 text-xs font-semibold text-orange">
               <FlaskConical size={13} aria-hidden /> Acesso demonstrativo
             </p>
             <h2 className="text-2xl font-semibold">Entrar no {HOUSE}</h2>
@@ -94,7 +94,7 @@ export const Login = () => {
             {PROFILES.map(({ role: r, label, desc, icon: Icon }) => (
               <button key={r} type="button" role="radio" aria-checked={role === r} onClick={() => pick(r)}
                 className={`flex min-h-[60px] items-center gap-3 rounded-xl border px-3.5 py-2 text-left transition-colors ${role === r ? 'border-cream/70 bg-cream/10' : 'border-line hover:border-cream/30'}`}>
-                <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${role === r ? 'bg-brand text-cream' : 'bg-raised text-cream'}`}><Icon size={20} aria-hidden /></span>
+                <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${role === r ? 'bg-brand text-paper' : 'bg-raised text-cream'}`}><Icon size={20} aria-hidden /></span>
                 <span><span className="block font-semibold text-cream">{label}</span><span className="block text-sm text-muted">{desc}</span></span>
               </button>
             ))}
