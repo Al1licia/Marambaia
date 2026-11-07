@@ -4,7 +4,8 @@
 
 Protótipo funcional para hackathon. Conecta três dimensões: **Conhecimento** (como o prato é feito e quais decisões o definem), **Pessoas** (formar a equipe e reconhecer o mestre) e **Consistência** (acompanhar se o prato continua no padrão).
 
-Todos os dados são fictícios. O Bar do Seu Arlindo é um estabelecimento inventado para a demonstração.
+Todos os dados são fictícios.
+O Bar do Seu Arlindo é um estabelecimento inventado para a demonstração.
 
 ## Como executar
 
