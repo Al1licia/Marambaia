@@ -24,7 +24,7 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean
       <div className="mx-auto max-w-lg p-6 pt-24">
         <EmptyState icon={TriangleAlert} title="Esta tela não abriu como esperado"
           action={<Button icon={RotateCcw} onClick={() => window.location.reload()}>Recarregar</Button>}>
-          Seus registros continuam salvos neste navegador. Recarregue para voltar ao Ponto Zero.
+          Seus registros continuam salvos neste navegador. Recarregue para voltar ao No Ponto.
         </EmptyState>
       </div>
     );

@@ -45,7 +45,7 @@ export const Layout = () => {
             className="-ml-2 flex h-12 w-12 items-center justify-center rounded-xl text-cream hover:bg-cream/5">
             <Menu size={24} aria-hidden />
           </button>
-          <Link to="/inicio" className="flex items-center gap-2.5" aria-label="Ponto Zero, ir para o início">
+          <Link to="/inicio" className="flex items-center gap-2.5" aria-label="No Ponto, ir para o início">
             <LogoMark size={38} />
             <Wordmark className="hidden text-xl min-[420px]:block" />
           </Link>

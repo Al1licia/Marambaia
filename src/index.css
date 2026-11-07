@@ -3,30 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-  html { color-scheme: dark; -webkit-text-size-adjust: 100%; }
+  html { color-scheme: light; -webkit-text-size-adjust: 100%; }
   body {
     @apply bg-ink font-sans text-body antialiased;
     min-height: 100dvh;
     overflow-x: hidden;
   }
   h1, h2, h3 { @apply font-display text-cream; text-wrap: balance; font-optical-sizing: auto; }
-  :focus-visible { outline: 2px solid #FF9E00; outline-offset: 2px; border-radius: 6px; }
-  ::selection { background: #C01D2E; color: #FEE5A5; }
+  :focus-visible { outline: 2px solid #B3202D; outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: #B3202D; color: #FBF7EC; }
   input, select, textarea { font: inherit; }
-  input[type='date']::-webkit-calendar-picker-indicator { filter: invert(.85) sepia(.3); }
-  select option { background: #141A20; color: #EFE6D0; }
+  select option { background: #FBF7EC; color: #241B15; }
 }
 
 @layer components {
-  .ring-mark { background: linear-gradient(40deg, #FF9E00 10%, #D300C5 90%); }
+  .ring-mark { background: #B3202D; }
   .field {
-    @apply min-h-[48px] w-full rounded-xl border border-line bg-ink/60 px-3.5 py-2.5 text-body
-           placeholder:text-muted/70 transition-colors hover:border-cream/30 focus:border-orange focus:outline-none;
+    @apply min-h-[48px] w-full rounded-xl border border-line bg-surface px-3.5 py-2.5 text-body
+           placeholder:text-muted/70 transition-colors hover:border-cream/30 focus:border-brand focus:outline-none;
   }
-  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.12em] text-muted; }
+  .eyebrow { @apply text-sm font-semibold text-muted; }
   .no-bar { scrollbar-width: none; }
   .no-bar::-webkit-scrollbar { display: none; }
-  .range { accent-color: #FF9E00; }
+  .range { accent-color: #B3202D; }
 }
 
 @media (prefers-reduced-motion: reduce) {
